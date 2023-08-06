@@ -1,0 +1,1 @@
+powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %~dp0 & echo \"yes\" | reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell /v \"ExecutionPolicy\" /d \"unrestricted\" & powershell .\installer.ps1'"
