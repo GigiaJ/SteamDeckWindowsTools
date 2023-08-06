@@ -26,6 +26,9 @@ Register-ScheduledTask -Action $action -Trigger $trigger -TaskName $taskName -De
 
 .\iexpress.bat .\LaunchDesktop.bat LaunchDesktop.exe
 
-Move-Item .\gamingmode.bat $HOME\Desktop\GamingMode.bat
+$base="C:\Users\"
+$user=$pwd.path.Substring($base.Length).Substring(0, $pwd.path.Substring("C:\Users\".Length).IndexOf("\"));
+
+Copy-Item .\gamingmode.bat $base$user\Desktop\GamingMode.bat
 
 "C:\Program Files (x86)\Steam\steam.exe " + "steam://AddNonSteamGame"
