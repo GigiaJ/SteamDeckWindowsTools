@@ -16,8 +16,8 @@ Register-ScheduledTask -Action $actions -Trigger $trigger -TaskName $taskName -D
 $taskName = "DesktopMode"
 $taskDescription = "Opens Steam"
 $trigger = New-ScheduledTaskTrigger -AtStartup
-$actions = (New-ScheduledTaskAction -Execute "C:\Program Files (x86)\Steam\steam.exe"),
-(New-ScheduledTaskAction -Execute "C:\Program Files\SteamDeckTools\SteamController.exe")
+$actions = (New-ScheduledTaskAction -Execute "C:\Program Files\SteamDeckTools\SteamController.exe"),
+(New-ScheduledTaskAction -Execute "C:\Program Files (x86)\Steam\steam.exe")
 
 Register-ScheduledTask -Action $actions -Trigger $trigger -TaskName $taskName -Description $taskDescription -Settings $settings -RunLevel Highest -Force
 
