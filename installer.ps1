@@ -31,6 +31,4 @@ $user=$pwd.path.Substring($base.Length).Substring(0, $pwd.path.Substring("C:\Use
 $filename="Return to Gaming Mode"
 
 Copy-Item .\gamingmode.bat $base$user\Desktop\$filename.bat
-
-
-"C:\Program Files (x86)\Steam\steam.exe " + "steam://AddNonSteamGame"
+Copy-Item .\gamingmode.bat $base$user\OneDrive\Desktop\$filename.bat
