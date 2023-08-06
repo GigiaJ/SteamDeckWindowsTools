@@ -3,5 +3,4 @@ echo "yes" | REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Curren
 echo "yes" | REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v Shell /t REG_SZ /d ""
 taskkill /f /im Steam.exe
 explorer.exe
-schtasks /run /tn "DesktopModeSteam"
-schtasks /run /tn "DesktopModeSteamController"
+schtasks /run /tn "DesktopMode"
