@@ -26,4 +26,6 @@ Register-ScheduledTask -Action $action -Trigger $trigger -TaskName $taskName -De
 
 .\iexpress.bat .\LaunchDesktop.bat LaunchDesktop.exe
 
+Move-Item .\gamingmode.bat $HOME\Desktop\GamingMode.bat
+
 "C:\Program Files (x86)\Steam\steam.exe " + "steam://AddNonSteamGame"
