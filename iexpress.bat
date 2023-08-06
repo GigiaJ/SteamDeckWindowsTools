@@ -17,7 +17,6 @@ del /q /f %~n0.exe 1>nul 2>nul
 endlocal & exit /b %errorlevel%
 */
 
-//https://github.com/npocmaka/batch.scripts/blob/master/hybrids/.net/bat2exe.bat
 import System;
 import System;
 import System.IO;
