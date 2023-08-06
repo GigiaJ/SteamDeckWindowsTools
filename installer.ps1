@@ -13,15 +13,15 @@ $taskName = "GamingMode"
 $taskDescription = "Opens Steam in big picture mode"
 Register-ScheduledTask -Action $action -Trigger $trigger -TaskName $taskName -Description $taskDescription -Settings $settings -RunLevel Highest -Force
 
-$actionCommand = "C:\Program Files (x86)\Steam\steam.exe"
 $taskName = "DesktopModeSteam"
 $taskDescription = "Opens Steam"
-$action = New-ScheduledTaskAction -Execute $actionCommand -Argument $actionArgument
+$action = New-ScheduledTaskAction -Execute $actionCommand
 Register-ScheduledTask -Action $action -Trigger $trigger -TaskName $taskName -Description $taskDescription -Settings $settings -RunLevel Highest -Force
 
-$actionCommand = ""
+$actionCommand = "C:\Program Files\SteamDeckTools\SteamController.exe"
 $taskName = "DesktopModeSteamController"
 $taskDescription = "Opens the SteamController program"
+$action = New-ScheduledTaskAction -Execute $actionCommand
 Register-ScheduledTask -Action $action -Trigger $trigger -TaskName $taskName -Description $taskDescription -Settings $settings -RunLevel Highest -Force
 
 .\iexpress.bat .\LaunchDesktop.bat LaunchDesktop.exe
