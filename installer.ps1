@@ -13,7 +13,7 @@ $actions = (New-ScheduledTaskAction -Execute "taskkill /f /im SteamController.ex
 $taskDescription = "Opens Steam in big picture mode"
 Register-ScheduledTask -Action $actions -Trigger $trigger -TaskName $taskName -Description $taskDescription -Settings $settings -RunLevel Highest -Force
 
-$taskName = "DesktopModeSteam"
+$taskName = "DesktopMode"
 $taskDescription = "Opens Steam"
 $actions = (New-ScheduledTaskAction -Execute "C:\Program Files (x86)\Steam\steam.exe"),
 (New-ScheduledTaskAction -Execute "C:\Program Files\SteamDeckTools\SteamController.exe")
