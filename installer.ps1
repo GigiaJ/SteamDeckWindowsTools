@@ -7,8 +7,8 @@ $trigger = New-ScheduledTaskTrigger -AtLogon
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries
 
 $taskName = "GamingMode"
-$actions = (New-ScheduledTaskAction -Execute "taskkill /f /im SteamController.exe"),
-(New-ScheduledTaskAction -Execute "taskkill /f /im explorer.exe"),
+$actions = (New-ScheduledTaskAction -Execute "taskkill" -Argument "/f /im SteamController.exe"),
+(New-ScheduledTaskAction -Execute "taskkill" -Argument "/f /im explorer.exe"),
 (New-ScheduledTaskAction -Execute "C:\Program Files (x86)\Steam\steam.exe" -Argument "steam://open/bigpicture")
 $taskDescription = "Opens Steam in big picture mode"
 Register-ScheduledTask -Action $actions -Trigger $trigger -TaskName $taskName -Description $taskDescription -Settings $settings -RunLevel Highest -Force
