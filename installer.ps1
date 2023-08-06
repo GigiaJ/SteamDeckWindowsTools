@@ -28,7 +28,9 @@ Register-ScheduledTask -Action $action -Trigger $trigger -TaskName $taskName -De
 
 $base="C:\Users\"
 $user=$pwd.path.Substring($base.Length).Substring(0, $pwd.path.Substring("C:\Users\".Length).IndexOf("\"));
+$filename="Return to Gaming Mode"
 
-Copy-Item .\gamingmode.bat $base$user\Desktop\GamingMode.bat
+Copy-Item .\gamingmode.bat $base$user\Desktop\$filename.bat
+
 
 "C:\Program Files (x86)\Steam\steam.exe " + "steam://AddNonSteamGame"
