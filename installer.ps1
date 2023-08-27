@@ -29,3 +29,8 @@ $filename="Return to Gaming Mode"
 
 Copy-Item .\gamingmode.bat $base$user\Desktop\$filename.bat
 Copy-Item .\gamingmode.bat $base$user\OneDrive\Desktop\$filename.bat
+
+New-Item -Path "c:\Program Files" -Name "WindowsSteamDeckToolsScripts" -ItemType "directory"
+
+Move-Item .\DesktopModeRegEdit.bat "C:\Program Files\WindowsSteamDeckToolsScripts"
+Move-Item .\LaunchDesktop.exe "C:\Program Files\WindowsSteamDeckToolsScripts"
