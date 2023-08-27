@@ -34,3 +34,11 @@ New-Item -Path "c:\Program Files" -Name "WindowsSteamDeckToolsScripts" -ItemType
 
 Move-Item .\DesktopModeRegEdit.bat "C:\Program Files\WindowsSteamDeckToolsScripts"
 Move-Item .\LaunchDesktop.exe "C:\Program Files\WindowsSteamDeckToolsScripts"
+
+$SID= Get-LocalUser -Name $env:USERNAME | Select sid
+$PRE="<UserId>"
+$POST="</UserId>"
+$SID=([string]$SID)
+$SID=$SID.Substring(6, ($SID.Length - 7))
+$file="DesktopModeRegistry.xml"
+(Get-Content $file) -replace "$PRE$POST", "$PRE$SID$POST" | Out-File $file
