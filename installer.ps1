@@ -42,3 +42,5 @@ $SID=([string]$SID)
 $SID=$SID.Substring(6, ($SID.Length - 7))
 $file="DesktopModeRegistry.xml"
 (Get-Content $file) -replace "$PRE$POST", "$PRE$SID$POST" | Out-File $file
+$file="GamingModeRegistry.xml"
+(Get-Content $file) -replace "$PRE$POST", "$PRE$SID$POST" | Out-File $file
