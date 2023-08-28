@@ -32,6 +32,7 @@ Copy-Item .\gamingmode.bat $base$user\OneDrive\Desktop\$filename.bat
 
 New-Item -Path "c:\Program Files" -Name "WindowsSteamDeckToolsScripts" -ItemType "directory"
 
+Move-Item .\GamingModeRegEdit.bat "C:\Program Files\WindowsSteamDeckToolsScripts"
 Move-Item .\DesktopModeRegEdit.bat "C:\Program Files\WindowsSteamDeckToolsScripts"
 Move-Item .\LaunchDesktop.exe "C:\Program Files\WindowsSteamDeckToolsScripts"
 
